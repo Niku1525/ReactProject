@@ -1,6 +1,16 @@
-function Video({ srcVideo, videoClass }) {
+import { useEffect, useRef } from "react";
+
+function Video({ srcVideo, videoClass, volume = 0.6 }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.volume = volume;
+    }
+  }, [volume]);
+
   return (
-    <video controls className={videoClass}>
+    <video ref={videoRef} className={videoClass} controls autoPlay>
       <source src={srcVideo} />
     </video>
   );
