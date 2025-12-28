@@ -1,6 +1,7 @@
 body {
-  background-image: url("./assets/Firefly2.png");
+  background-image: url("./assets/Firefly3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgb(255, 0, 183) !important;
+  background-attachment: fixed;
 }
